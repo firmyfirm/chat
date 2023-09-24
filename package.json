@@ -1,0 +1,10 @@
+{
+  "name": "chat",
+  "description": "An edge chat service that runs on Cloudflare Workers using Durable Objects",
+  "version": "1.0.0",
+  "module": "./src/chat.mjs",
+  "private": true,
+  "dependencies": {
+    "wrangler": "^3.9.0"
+  }
+}
