@@ -21,6 +21,7 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
+      font-color: white;
     }
 
     #chatlog {
@@ -205,7 +206,7 @@
 
 <body>
   <form id="name-form" action="/fake-form-action">
-    <input id="name-input" placeholder="your name">
+    <input id="name-input" placeholder="your chat name">
   </form>
   <!--
     <form id="room-form" action="/fake-form-action">
@@ -462,15 +463,9 @@
         if (!wroteWelcomeMessages) {
           wroteWelcomeMessages = true;
           addChatMessage(null,
-            "* WARNING: Participants in this chat are random people on the internet. " +
-            "Names are not authenticated; anyone can pretend to be anyone.");
-          if (roomname.length == 64) {
-            addChatMessage(null,
-              "* This is a private room. You can invite someone to the room by sending them the URL.");
-          } else {
+            "WARNING: Names are not authenticated; anyone can pretend to be anyone.");
             addChatMessage(null,
               "* Welcome to #" + roomname + ". Say hi!");
-          }
         }
       } else {
         // A regular chat message.
